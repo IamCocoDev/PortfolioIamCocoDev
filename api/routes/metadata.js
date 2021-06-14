@@ -11,7 +11,7 @@ routerMetaData.get('/', function(req, res, next) {
     return metadata
   },
   function (error) { // failure handler
-    console.log(error)
+    console.log(error + 'Your backend its fuck')
   })
 });
 
