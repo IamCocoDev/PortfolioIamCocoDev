@@ -6,7 +6,7 @@ function NavBar() {
   const [navbar, setNavBar] = useState(false)
 
   const displaceNavBar = () => {
-    if (window.scrollY >= 40){
+    if (window.scrollY >= 80){
       setNavBar(true)
     }
     else{

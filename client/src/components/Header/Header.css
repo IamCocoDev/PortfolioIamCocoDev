@@ -1,7 +1,8 @@
 .header{
   width: 100%;
   max-width: 100vw;
-  height: 100vh;
+  height: 10rem;
+  max-height: 25%;
 }
 
 .headerBox1{
@@ -30,7 +31,7 @@
 .headerImg{
   grid-row: 2/5;
   grid-column: 5/6;
-  width: 10vw;
+  width: 8rem;
   height: auto;
   justify-self: flex-end;
   align-self: center;

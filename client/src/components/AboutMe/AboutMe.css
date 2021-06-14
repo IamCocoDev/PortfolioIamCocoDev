@@ -16,6 +16,6 @@
   justify-self: center;
   align-self: flex-end;
   clip-path: polygon(50% 0, 100% 13%, 86% 100%, 12% 100%, 0 13%);
-  height: 30vh;
-  width: auto;
+  width: 18rem;
+  height: auto;
 }
