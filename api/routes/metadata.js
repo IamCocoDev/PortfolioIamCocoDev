@@ -10,8 +10,8 @@ routerMetaData.get('/', function(req, res, next) {
     console.log(metadata)
     return metadata
   },
-  function (error) { // failure handler
-    console.log(error)
+  function (e) { // failure handler
+    console.log(e)
   })
 });
 
