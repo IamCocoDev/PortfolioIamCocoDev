@@ -2,22 +2,24 @@ var express = require('express');
 var routerMetaData = express.Router();
 const urlMetadata = require('url-metadata')
 
+let urls = [
+  /* 'https://dice-starter.vercel.app/',
+  'http://ec2-54-232-68-2.sa-east-1.compute.amazonaws.com:3000/', */
+  'https://weather-app-saymecoco.vercel.app/',
+]
 
 /* GET users listing. */
 routerMetaData.get('/', function(req, res, next) {
-  urlMetadata('https://dice-starter.vercel.app/').then(
-  function (metadata) { // success handler
-    console.log(metadata)
-    return metadata
-  },
-<<<<<<< HEAD
-  function (e) { // failure handler
-    console.log(e)
-=======
-  function (error) { // failure handler
-    console.log(error + 'Your backend its fuck')
->>>>>>> e617ee596cef00122f72553351b79aa69854f11d
-  })
+  for (let index = 0; index < urls.length; index++) {
+    urlMetadata(urls[index]).then(
+    function (metadata) { // success handler
+      console.log(metadata['og:description'])
+      return metadata
+    },   
+    function (error) { // failure handler
+      console.log(error + 'Your backend its fuck')
+    })
+  }
 });
 
 module.exports = routerMetaData;
