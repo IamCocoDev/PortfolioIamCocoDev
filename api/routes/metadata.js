@@ -3,17 +3,25 @@ var routerMetaData = express.Router();
 const urlMetadata = require('url-metadata')
 
 let urls = [
-  /* 'https://dice-starter.vercel.app/',
-  'http://ec2-54-232-68-2.sa-east-1.compute.amazonaws.com:3000/', */
+  'https://dice-starter.vercel.app/',
+  'http://ec2-54-232-68-2.sa-east-1.compute.amazonaws.com:3000/',
   'https://weather-app-saymecoco.vercel.app/',
 ]
+let metadataFinish =  []
 
 /* GET users listing. */
 routerMetaData.get('/', function(req, res, next) {
   for (let index = 0; index < urls.length; index++) {
     urlMetadata(urls[index]).then(
     function (metadata) { // success handler
-      console.log(metadata['og:description'])
+      metadataFinish.push({
+        url:urls[index],
+        title:metadata['og:title'],
+        description:metadata['og:description'],
+        image:metadata['og:image'],
+        author:metadata['author'],
+      })
+      console.log(metadata['author'])
       return metadata
     },   
     function (error) { // failure handler
