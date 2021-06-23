@@ -21,7 +21,7 @@ routerMetaData.get('/', function(req, res, next) {
         image:metadata['og:image'],
         author:metadata['author'],
       })
-      console.log(metadata['author'])
+      console.log(metadataFinish)
       return metadata
     },   
     function (error) { // failure handler
