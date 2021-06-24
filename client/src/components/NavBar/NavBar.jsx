@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import icon from '../images/icon.ico'
+import { HashLink } from 'react-router-hash-link';
 import './NavBar.css'
 
 function NavBar() {
@@ -25,9 +26,15 @@ function NavBar() {
         }
       </div>
       <div className='navBar2'>
-        <h3 className='navBarAboutMe'>About Me</h3>
-        <h3 className='navBarProjects'>Projects</h3>
-        <h3 className='navBarContactMe'>Contact Me</h3>
+        <HashLink to={'#aboutMe'} className='navBarAboutMe'>
+          About Me
+        </HashLink>
+        <HashLink to={'#projects'} className='navBarProjects'>
+         Projects
+        </HashLink>
+        <HashLink to={'#contactMe'} className='navBarContactMe'>
+          Contact Me
+        </HashLink>
       </div>
     </div>
   )
