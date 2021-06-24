@@ -10,9 +10,9 @@ let urls = [
 let metadataFinish =  []
 
 /* GET users listing. */
-routerMetaData.get('/', function(req, res, next) {
+routerMetaData.get('/', async function(req, res, next) {
   for (let index = 0; index < urls.length; index++) {
-    urlMetadata(urls[index]).then(
+   await urlMetadata(urls[index]).then(
     function (metadata) { // success handler
       metadataFinish.push({
         url:urls[index],
@@ -21,13 +21,13 @@ routerMetaData.get('/', function(req, res, next) {
         image:metadata['og:image'],
         author:metadata['author'],
       })
-      console.log(metadataFinish)
-      return metadata
     },   
     function (error) { // failure handler
       console.log(error + 'Your backend its fuck')
     })
   }
+  res.status(200).json(metadataFinish)
+  metadataFinish = []
 });
 
 module.exports = routerMetaData;
