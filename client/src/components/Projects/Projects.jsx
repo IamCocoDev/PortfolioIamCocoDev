@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import { ROUTE } from '../../scripts/route.js'
 import './Projects.css'
 import Project from '../Project/Project.jsx'
 
@@ -9,9 +8,7 @@ function Projects() {
 
   useEffect(() => {
     async function getData() {
-      const result = await axios(
-        ROUTE,
-      );
+      const result = await axios.get('/metadata');
       setData(result.data);
     }
     getData()
