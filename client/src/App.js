@@ -1,17 +1,21 @@
 import './App.css';
 import {Route} from 'react-router-dom';
 import Header from './components/Header/Header';
-import Landing from './components/landing/landing';
 import NavBar from './components/NavBar/NavBar';
 import AboutMe from './components/AboutMe/AboutMe';
+import Projects from './components/Projects/Projects';
+import ContactMe from './components/ContactMe/ContactMe';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
-    <Route exact path='/' component={Header}/>
-    <Route exact path='/' component={NavBar}/>
-    <Route exact path='/' component={AboutMe}/>
-    <Route exact path='/' component={Landing}/>
+    <Route path='/' component={Header}/>
+    <Route path='/' component={NavBar}/>
+    <Route path='/' component={AboutMe}/>
+    <Route path='/' component={Projects}/>
+    <Route path='/' component={ContactMe}/>
+    <Route path='/' component={Footer}/>
     </div>
   );
 }

@@ -19,3 +19,14 @@
   width: 18rem;
   height: auto;
 }
+
+.aboutMeText{
+  grid-column: 4/5;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: flex-end;
+  text-align: left;
+  line-height: 1.5rem;
+  word-spacing: 0.3rem;
+  color: #333333;
+}
