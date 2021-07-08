@@ -1,4 +1,8 @@
 .projects{
-  height: 100vh;
-  font-size: 50vh;
+  width: 99vw;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
