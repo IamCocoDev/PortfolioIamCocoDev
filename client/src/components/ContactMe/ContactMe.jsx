@@ -12,7 +12,7 @@ function ContactMe() {
       <a  className='contactMeMail' href='mailto:giovencofede@gmail.com'>
         <img className='contactMeImageMail' src={gmail} alt='Logo Gmail' title='Clicl to send me a mail'/>
       </a>
-      <Link className='contactMeLinkedin' to="https://www.linkedin.com/in/federico-giovenco-96929320b/">
+      <Link to={{pathname:'https://www.linkedin.com/in/federico-giovenco-dev/'}} target="_blank" className='contactMeLinkedin' >
         <img className='contactMeLinkedinImage' src={linkedin} alt='Logo LinkedIn' title='Clicl to view my Linkedin'/>
       </Link>
       <div className='contactMePhone'>
