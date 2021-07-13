@@ -1,11 +1,14 @@
-.header{
+.aboutMe{
   width: 100%;
-  max-width: 100vw;
+  min-width: 100vw;
+  height: 67vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutMeBox1{
   display: grid;
-  height: 67vh;
   grid-template-columns: 3vw 1fr 3vw 1fr 3vw;
   grid-template-rows: 3vh 1fr 10vh;
 }
