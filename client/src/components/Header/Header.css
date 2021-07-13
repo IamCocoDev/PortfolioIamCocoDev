@@ -9,7 +9,6 @@
   background-color:#009688;
   color: white;
   display: grid;
-  height: 25vh;
   grid-template-columns: 3vw 1fr 1fr 1fr 1fr 3vw;
   grid-template-rows: 1vh 1fr 4vh 1fr 0.5vh;
 }
