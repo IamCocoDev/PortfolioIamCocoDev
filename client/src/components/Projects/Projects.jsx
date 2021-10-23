@@ -14,13 +14,6 @@ function Projects() {
     getData()
   }, [])
 
-  if (data[0] === ' ') {
-    console.log('loading')
-  }
-  else if(data){ 
-    console.log(data)
-  }
-
   return (
     <div id='projects' className='projects'>
       {
