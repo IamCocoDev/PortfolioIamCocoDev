@@ -4,7 +4,7 @@ import './Projects.css'
 import Project from '../Project/Project.jsx'
 
 function Projects() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([' '])
 
   useEffect(() => {
     async function getData() {
@@ -14,11 +14,18 @@ function Projects() {
     getData()
   }, [])
 
-  console.log(data)
+  if (data[0] === ' ') {
+    console.log('loading')
+  }
+  else if(data){ 
+    console.log(data)
+  }
 
   return (
     <div id='projects' className='projects'>
       {
+        data[0] === ' ' ?
+        <h2>Loading ...</h2>:
         (data.map((c) => (
         <Project
           url={c.url}
